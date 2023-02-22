@@ -3,16 +3,14 @@ from tqdm import tqdm
 
 L = instaloader.Instaloader()
 
-# Carregar a sessão com login (opcional)
-# L.load_session_from_file("seu-username")
-
 # Ler nomes de usuário do arquivo
 with open('agenda.txt', 'r') as f:
     usernames = f.readlines()
     usernames = [username.strip() for username in usernames]
 
 results = []
-for username in tqdm(usernames, desc="Coletando dados dos usuários", unit="usuários"):
+
+for username in tqdm(usernames, desc="Coletando dados das contas", unit="contas"):
     try:
         profile = instaloader.Profile.from_username(L.context, username)
 
@@ -38,7 +36,7 @@ for username in tqdm(usernames, desc="Coletando dados dos usuários", unit="usu�
 # Ordenar resultados por número de likes
 results = sorted(results, key=lambda x: x['likes'], reverse=True)
 
-# Exportar resultados para um arquivo
+# Exportar resultados para o arquivo resultados.txt
 with open('resultados.txt', 'w') as f:
     f.write("==> AGENDA DE EVENTOS <==\n\n")
     for post_info in results:
