@@ -3,7 +3,7 @@ Script em Python que coleta informações do último post no feed de uma lista d
 
 Os resultados são exibidos em uma ordem dos posts mais curtidos até os menos curtidos. A ideia é auxiliar na tomada de decisão para onde ir em um final de semana com a galera ou com a namorada a partir de informações como URL do flyer da casa de shows e dados de atrações, horários e ingressos disponíveis nesse post.
 
-Eu me chamo Laercio Monteiro, sou analista e desenvolvedor de Software e entusiasta de Segurança da Informação/Ethical Hacking.
+Eu me chamo Laercio Monteiro, sou policial, analista e desenvolvedor de Software e entusiasta de Segurança da Informação/Ethical Hacking.
 
 💼 Linkedin: https://www.linkedin.com/in/laercio-monteiro
 
