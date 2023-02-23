@@ -24,7 +24,8 @@ for username in tqdm(usernames, desc="Coletando dados das contas", unit="contas"
                 'timestamp': post.date_local.timestamp(),
                 'likes': post.likes,
                 'comments': post.comments,
-                'caption': post.caption
+                'caption': post.caption,
+                'data': post.date_local.strftime("%d/%m/%Y")
             }
 
             results.append(post_info)
@@ -41,6 +42,7 @@ with open('resultados.txt', 'w') as f:
     f.write("==> AGENDA DE EVENTOS <==\n\n")
     for post_info in results:
         f.write(f"Usuário: {post_info['username']}\nLink de acesso: {post_info['post_url']}\n")
+        f.write(f"Data do post: {post_info['data']}\n")
         f.write(f"Curtidas: {post_info['likes']}, Comentários: {post_info['comments']}\n")
         f.write(f"Legenda: {post_info['caption']}\n\n")
 
