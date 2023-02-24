@@ -1,5 +1,6 @@
 import instaloader
 from tqdm import tqdm
+from datetime import datetime
 
 L = instaloader.Instaloader()
 
@@ -10,12 +11,20 @@ with open('agenda.txt', 'r') as f:
 
 results = []
 
+# Obter mês atual
+now = datetime.now()
+current_month = now.month
+
 for username in tqdm(usernames, desc="Coletando dados das contas", unit="contas"):
     try:
         profile = instaloader.Profile.from_username(L.context, username)
 
         # Iterar pelos posts do perfil em ordem cronológica
         for post in profile.get_posts():
+
+            # Verificar se o post é do mês atual
+            if post.date_local.month != current_month:
+                break
 
             # Extrair informações relevantes do post mais recente
             post_info = {
