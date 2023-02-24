@@ -54,4 +54,8 @@ with open('resultados.txt', 'w') as f:
         f.write(f"Data do post: {post_info['data']}\n")
         f.write(f"Curtidas: {post_info['likes']}, Comentários: {post_info['comments']}\n")
         f.write(f"Legenda: {post_info['caption']}\n\n")
+print("\n")
+# Mensagem de conclusão
+print("Processo finalizado!\n")
+print(f"Os resultados da coleta podem ser encontrados no arquivo 'resultados.txt'.")
 
