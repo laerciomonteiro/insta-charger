@@ -5,7 +5,7 @@ Os resultados são exibidos em uma ordem dos posts mais curtidos até os menos c
 
 Para executar a ferramenta, após clonar o repositório, acesse o diretório `insta-charger` e execute o comando:
 
-`python3 insta_charger.py`
+`python3 insta-charger.py`
 
 Em seguida, o script começa a rodar automaticamente, exibindo a barra de progresso da coleta. Finalizado o procedimento, basta abrir o arquivo resultados.txt para verificar as informações.
 
