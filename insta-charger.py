@@ -1,6 +1,7 @@
 import instaloader
 from tqdm import tqdm
 from datetime import datetime
+from instaloader.exceptions import ProfileNotExistsException
 
 L = instaloader.Instaloader()
 
@@ -40,6 +41,8 @@ for username in tqdm(usernames, desc="Coletando dados das contas", unit="contas"
             results.append(post_info)
             break  # Sair do loop após o primeiro post
 
+    except ProfileNotExistsException:
+        print(f"O usuário {username} não existe no Instagram. Ignorando...")
     except Exception as e:
         print(f"Não foi possível obter dados do usuário {username}: {str(e)}")
 
