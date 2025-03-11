@@ -54,5 +54,5 @@ python3 insta-charger.py
 
 ---
 
-🔐 *Desenvolvido por um profissional de segurança com paixão por desenvolvimento de software e automação inteligente*
+🔐 *Desenvolvido por um profissional com paixão por desenvolvimento de software e automação inteligente!*
 
