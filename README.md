@@ -1,37 +1,58 @@
-# insta-charger
+# Insta Charger 🕵️♂️📲
 
-Um coletor que busca os posts recentes de vários perfis do Instagram de locais em Fortaleza - CE e gera um relatório com métricas e informações relevantes sobre cada post.
+Script Python que automatiza a coleta de informações de posts do Instagram de casas de show em Fortaleza/CE, ajudando na escolha de programas de final de semana.
 
-Funciona da seguinte maneira:
+## Funcionalidades Principais
+- Coleta automática do último post de cada perfil listado em `agenda.txt`
+- Extração de dados como:
+  - URL do flyer do evento
+  - Detalhes das atrações
+  - Horários de funcionamento
+  - Informações sobre ingressos
+- Classificação dos resultados por engajamento (curtidas)
+- Geração automática do arquivo `resultados.txt`
+- Barra de progresso visual durante a execução
 
-1. Lê os nomes de usuário do Instagram de um arquivo texto chamado "agenda.txt".
+## Pré-requisitos
+- Python 3.x instalado
+- Bibliotecas Python (executar no terminal):
+```bash
+pip install instaloader tqdm
+```
 
-2. Usa a biblioteca Instaloader para acessar o Instagram e obter os dados dos perfis.
+## Instalação e Execução
+1. Clonar repositório
+```bash
+git clone https://github.com/laerciomonteiro/insta-charger.git
+```
+2. Acesse o diretório:
+```bash
+cd insta-charger
+```
+3. Execute o script:
+```bash
+python3 insta-charger.py
+```
 
-3. Para cada usuário, obtém o post mais recente dentro do mês atual.
+## Configuração
+1. Adicione os perfis do Instagram que deseja monitorar no arquivo `agenda.txt`
+2. Um arquivo de exemplo está incluído para referência
 
-4. Extrai informações como número de curtidas, comentários, data e legenda desse post.
+## Saída
+- Resultados armazenados em `resultados.txt`
+- Ordenação automática dos posts mais populares (mais curtidos) para os menos populares
 
-5. Salva os resultados em um arquivo "resultados.txt", ordenando os posts pelo número de curtidas.
+## Licença
+`MIT License`
 
-6. Trata possíveis erros, como perfis inexistentes.
+## Autor
+**Laercio Monteiro**  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin)](https://www.linkedin.com/in/laercio-monteiro) 
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=flat&logo=instagram)](https://instagram.com/laercio.monteiro_)
 
-7. Exibe mensagem de conclusão do processo de coleta.
+✉️ Contato profissional: laercio@betacoding.com.br
 
-Pode ser útil para a análise de engajamento de influenciadores, concorrentes ou hashtags, permitindo identificar posts de sucesso e tendências.
+---
 
-Os resultados são exibidos em uma ordem dos posts mais curtidos até os menos curtidos. A ideia é auxiliar na tomada de decisão para onde ir em um final de semana com a galera ou com a namorada a partir de informações como URL do flyer da casa de shows e dados de atrações, horários e ingressos disponíveis nesse post.
+🔐 *Desenvolvido por um profissional de segurança com paixão por desenvolvimento de software e automação inteligente*
 
-Para executar a ferramenta, após clonar o repositório, acesse o diretório `insta-charger` e execute o comando:
-
-`python3 insta-charger.py`
-
-Em seguida, o script começa a rodar automaticamente, exibindo a barra de progresso da coleta. Finalizado o procedimento, basta abrir o arquivo resultados.txt para verificar as informações.
-
-Meu nome é Laercio Monteiro, sou policial, engenheiro de software e entusiasta de Segurança da Informação/Ethical Hacking.
-
-💼 Linkedin: https://www.linkedin.com/in/laercio-monteiro
-
-📱 Instagram: https://instagram.com/laercio.monteiro_
-
-📩 E-mail: laercio@betacoding.com.br
